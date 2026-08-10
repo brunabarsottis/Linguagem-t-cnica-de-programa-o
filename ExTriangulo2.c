@@ -1,17 +1,19 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main(int argc, char *argv[]) {
+int main() {
 	
-	int v1,v2,v3;
-	float media;
+	int base, altura;
+	float area;
 	
-	v1 = 15;
-	v2 = 25;
-	v3 = 20;
-	media = (v1+v2+v3)/3;
+	printf("Insira o valor da base do triangulo\n");
+	scanf("%d", &base);
+	printf("Insira o valor da altura do triangulo\n");
+	scanf("%d", &altura);
 	
-	printf("A media dos tres valores e: %0.f", media);
+	area = (base*altura)/2;
+	
+	printf("A area do Triangulo Retangulo e %0.f", area);
 	
 	return 0;
 }
