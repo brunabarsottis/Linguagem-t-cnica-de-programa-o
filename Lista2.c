@@ -11,7 +11,16 @@ int main(int argc, char *argv[]) {
 	scanf("%f", &k);
 	m = k/3.6;
 	printf("A velocidade %0.2f km/h, convertida para m/s e: %0.2f", k, m);
+
 	
+// Exercicio 3
+	float real, dolar, cotacao;
+	printf("Insira o valor em Real: ");
+	scanf("%f", &real);
+	printf("Insira o valor atual do Dolar: ");
+	scanf("%f", &dolar);
+	cotacao = real / dolar;
+	printf("O valor %0.2f em real, convertido em dolar e: %0.2f", real, cotacao);
 
 // Exercicio 6 
 	int n, antecessor, sucessor;
@@ -29,6 +38,6 @@ int main(int argc, char *argv[]) {
 	maiortemp = ((a+b+abs(a-b))/2);
 	maior = ((maiortemp+c+abs(maiortemp-c))/2);
 	printf("O maior entre |%d|%d|%d| = %d", a, b, c, maior);
-		
+	
 	return 0;
 }
