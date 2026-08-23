@@ -4,7 +4,7 @@
 
 int main(int argc, char *argv[]) {
 
-// Exercicio 1 da lista 1
+// Exercicio 1
 
 	int v1, v2;
 	
@@ -14,10 +14,28 @@ int main(int argc, char *argv[]) {
 	scanf("%d", &v2);
 	
 	printf("A ordem inversa dos numeros lidos: %d e %d", v2, v1);
-
-
-// Exercicio 3 da lista 1
 	
+	
+// Exercicio 2
+	
+	double n;
+	int expoente = 0;
+	
+	printf("\nInsira um valor de N: ");
+	scanf("%lf", &n);
+	
+	while (n >= 10.0){
+		n /= 10.0;
+		expoente++;
+	}
+	while (n < 1.0 && n > 0.0) {
+		n *= 10.0;
+		expoente--;
+	}
+	
+	printf("Em notacao cientifica: %.2lf x 10^%d", n, expoente);
+
+// Exercicio 3 
 	
 	int n, resultado, bit64, bit32, bit16, bit8, bit4, bit2 ;
 	
@@ -38,9 +56,67 @@ int main(int argc, char *argv[]) {
 	resultado = resultado/2;
 	
 	printf("\nO numero %d em binario = %d%d%d%d%d%d%d", n, resultado%2, bit2, bit4, bit8, bit16, bit32, bit64);
+
+// Exercicio 4
+
+	float salario, vendas, comissao;
 	
+	printf("Salario: ");
+	scanf("%f", &salario);
+	printf("Total de vendas: ");
+	scanf("%f", &vendas);
 	
-// Exercicio 8 da lista 1
+	comissao = salario + (vendas*0.15);
+	printf("Total a receber com comissao: %.2f", comissao);
+
+// Exercicio 5	
+
+	float v1, v2, v3, v4, soma, media, produtorio;
+	
+	printf("Insira o primeiro numero: ");
+	scanf("%f", &v1);
+	printf("Insira o segundo numero: ");
+	scanf("%f", &v2);
+	printf("Insira o terceiro numero: ");
+	scanf("%f", &v3);
+	printf("Insira o quarto numero: ");
+	scanf("%f", &v4);
+	
+	soma = v1+v2+v3+v4;
+	media = (v1+v2+v3+v4)/4;
+	produtorio = v1*v2*v3*v4;
+	
+	printf("\nA soma dos numeros e: %.2f, A media dos numeros e: %.2f e o Produtorio dos numeros e: %.2f", soma, media, produtorio);
+
+// Exercicio 6
+	
+	int idade, dias, meses, anos, resto;
+	
+	printf("Insira a idade em dias: ");
+	scanf("%d", &idade);
+	
+	anos = idade / 365;
+	resto = idade % 365;
+	meses = resto / 30;
+	dias = resto % 30;
+	
+	printf("%d anos\n", anos);
+	printf("%d meses\n", meses);
+	printf("%d dias", dias);
+
+// Exercicio 7
+
+	float raio, volume, pi;
+	
+	printf("Insira o Raio da esfera: ");
+	scanf("%f", &raio);
+	
+	pi = 3.14159;
+	volume = (4.0/3)*pi*pow(raio, 3);
+	
+	printf("O volume da esfera de raio %.2f e: %.2f", raio, volume);
+	
+// Exercicio 8 
 
 	int x1,x2,y1,y2;
 	float dist, cat1, cat2;
