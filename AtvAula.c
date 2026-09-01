@@ -44,7 +44,58 @@ int main(int argc, char *argv[]) {
 		case 'f':
 			printf ("F de feijao");
 			break;
-	}
+		case 'g':
+			printf("G de gente");
+			break;
+		case 'h':
+			printf("H de humano");
+			break;
+		case 'i':
+			printf("I de igualdade");
+			break;
+		case 'j':
+			printf("J de juventude");
+			break:
+		case 'l':
+        	printf("L de liberdade");
+        	break;
+    	case 'm':
+        	printf("M de molecagem");
+        	break;
+    	case 'n':
+        	printf("N de natureza");
+        	break;
+    	case 'o':
+        	printf("O de obrigado");
+        	break;
+   		case 'p':
+        	printf("P de proteção");
+        	break;
+    	case 'q':
+        	printf("Q de quero-quero");
+        	break;
+    	case 'r':
+        	printf("R de riacho");
+        	break;
+    	case 's':
+        	printf("S de saudade");
+        	break;
+    	case 't':
+        	printf("T de terra");
+        	break;
+    	case 'u':
+        	printf("U de universo");
+        	break;
+    	case 'v':
+        	printf("V de vitória");
+        	break;
+    	case 'x':
+	        printf("X de Xuxa");
+        	break;
+    	case 'z':
+        	printf("Z de zum-zum");
+        	break;
+		}
 	
 	return 0;
 }
