@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Crie um programa que receba uma letra, e verifique se ela È vogal ou consoante, 
-se ela for vogal, verifique se ela È 'a' ou 'o' caso seja mostre 'aoba' 
-caso seja 'i' ou 'u' mostre "l· ele". Caso contr·rio mostre "67" */
+/* Crie um programa que receba uma letra, e verifique se ela √© vogal ou consoante, 
+se ela for vogal, verifique se ela √© 'a' ou 'o' caso seja mostre 'aoba' 
+caso seja 'i' ou 'u' mostre "l√° ele". Caso contr√°rio mostre "67" */
 
 int main(int argc, char *argv[]) {
 	
