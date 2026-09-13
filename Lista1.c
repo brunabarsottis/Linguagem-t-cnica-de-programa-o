@@ -14,19 +14,23 @@ int main(int argc, char *argv[]) {
 	
 	
 // Exercicio 2
-	double n;
+	double n, coeficiente;
 	int expoente = 0;
 	printf("\nInsira um valor de N: ");
 	scanf("%lf", &n);
-	while (n >= 10.0){
-		n /= 10.0;
-		expoente++;
-	}
-	while (n < 1.0 && n > 0.0) {
-		n *= 10.0;
-		expoente--;
-	}
-	printf("Em notacao cientifica: %.2lf x 10^%d", n, expoente);
+	coeficiente = n;
+		
+	if (coeficiente >= 10000) { coeficiente /= 10000; expoente = 4; }
+    else if (coeficiente >= 1000) { coeficiente /= 1000; expoente = 3; }
+    else if (coeficiente >= 100) { coeficiente /= 100; expoente = 2; }
+    else if (coeficiente >= 10) { coeficiente /= 10; expoente = 1; }
+    else if (coeficiente < 1 && coeficiente> 0) {
+        if (coeficiente < 0.001) { coeficiente *= 10000; expoente = -4; }
+        else if (coeficiente < 0.01) { coeficiente *= 1000; expoente = -3; }
+        else if (coeficiente < 0.1) { coeficiente *= 100; expoente = -2; }
+        else { coeficiente *= 10; expoente = -1; }
+    }
+    printf("%.2lfx10^%d\n", coeficiente, expoente);
 
 // Exercicio 3 
 	int num, resultado, bit64, bit32, bit16, bit8, bit4, bit2 ;
