@@ -3,7 +3,22 @@
 #include <math.h>
 
 int main(int argc, char *argv[]) {
+	int opcao;
 
+	printf("=== MENU DE EXERCICIOS - LISTA 1 ===\n");
+    printf("1 - Ordem inversa de dois numeros\n");
+    printf("2 - Notacao cientifica\n");
+    printf("3 - Conversao para binario (n <= 64)\n");
+    printf("4 - Salario final com comissao (URI 1009)\n");
+    printf("5 - Soma, media e produtorio de 4 valores\n");
+    printf("6 - Idade em anos, meses e dias (URI 1020)\n");
+    printf("7 - Volume da esfera (URI 1011)\n");
+    printf("8 - Distancia entre dois pontos\n");
+    printf("Escolha o exercicio que deseja executar (1-8): ");
+    scanf("%d", &opcao);
+
+	switch (opcao) {
+    case 1: {
 // Exercicio 1
 	int v1, v2;
 	printf("Insira um numero inteiro: ");
@@ -11,8 +26,9 @@ int main(int argc, char *argv[]) {
 	printf("Insira outro numero inteiro: ");
 	scanf("%d", &v2);
 	printf("A ordem inversa dos numeros lidos: %d e %d", v2, v1);
-	
-	
+	break;
+}
+	case 2: {
 // Exercicio 2
 	double n, coeficiente;
 	int expoente = 0;
@@ -31,7 +47,9 @@ int main(int argc, char *argv[]) {
         else { coeficiente *= 10; expoente = -1; }
     }
     printf("%.2lfx10^%d\n", coeficiente, expoente);
-
+	break;
+}
+	case 3: {
 // Exercicio 3 
 	int num, resultado, bit64, bit32, bit16, bit8, bit4, bit2 ;
 	printf("\nEntre com o valor de N: ");
@@ -49,7 +67,9 @@ int main(int argc, char *argv[]) {
 	bit2 = resultado%2;
 	resultado = resultado/2;
 	printf("O numero %d em binario = %d%d%d%d%d%d%d", num, resultado%2, bit2, bit4, bit8, bit16, bit32, bit64);
-
+	break;
+}
+	case 4: {
 // Exercicio 4
 	float salario, vendas, comissao;
 	printf("\nSalario: ");
@@ -58,7 +78,9 @@ int main(int argc, char *argv[]) {
 	scanf("%f", &vendas);
 	comissao = salario + (vendas*0.15);
 	printf("Total a receber com comissao: %.2f", comissao);
-
+	break;
+}
+	case 5: {
 // Exercicio 5	
 	float va1, va2, v3, v4, soma, media, produtorio;
 	printf("\nInsira o primeiro numero: ");
@@ -73,7 +95,9 @@ int main(int argc, char *argv[]) {
 	media = (va1+va2+v3+v4)/4;
 	produtorio = va1*va2*v3*v4;
 	printf("A soma dos numeros e: %.2f, A media dos numeros e: %.2f e o Produtorio dos numeros e: %.2f", soma, media, produtorio);
-
+	break;
+}
+	case 6: {
 // Exercicio 6
 	int idade, dias, meses, anos, resto;
 	printf("\nInsira a idade em dias: ");
@@ -85,7 +109,9 @@ int main(int argc, char *argv[]) {
 	printf("%d anos\n", anos);
 	printf("%d meses\n", meses);
 	printf("%d dias", dias);
-
+	break;
+}
+	case 7: {
 // Exercicio 7
 	float raio, volume, pi;
 	printf("\nInsira o Raio da esfera: ");
@@ -93,7 +119,9 @@ int main(int argc, char *argv[]) {
 	pi = 3.14159;
 	volume = (4.0/3)*pi*pow(raio, 3);
 	printf("O volume da esfera de raio %.2f e: %.2f", raio, volume);
-	
+	break;
+}
+	case 8: {
 // Exercicio 8
 	int x1,x2,y1,y2;
 	float dist, cat1, cat2;
@@ -107,6 +135,11 @@ int main(int argc, char *argv[]) {
 	cat2 = pow((y2-y1), 2);
 	dist = sqrt(cat1+cat2);
 	printf("Distancia: %f", dist);
-	
+	break;
+}
+	default:
+        printf("\nOpcao invalida!\n");
+        break;
 	return 0;
+}
 }
