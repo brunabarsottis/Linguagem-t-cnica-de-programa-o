@@ -15,17 +15,5 @@ int main(int argc, char *argv[]) {
 	if(c>a && c>b) {
 		printf("%d eh o maior", c);
 	}
-	
-	int a,b,c;
-	printf("Insira os valores de A, B, C: ");
-	scanf("%d %d %d", &a, &b, &c);
-	if(a>b && a>c) {
-		printf("%d eh o maior\n", a);
-	}
-	if(b>a && b>c) {
-		printf("%d eh o maior\n", b);
-	} else {
-		printf("%d eh o maior", c);
-	}
 	return 0;
 }
