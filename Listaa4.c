@@ -12,10 +12,8 @@ int main(int argc, char *argv[]) {
 	
 	for(i=0; i<10; i++){
 		scanf("%d", &vet[i]);
-	}
-	maior_valor=vet[i];
-	
-	for(i=0; i<10; i++){
+	}	
+	for(i=0, maior_valor=vet[i]; i<10; i++){
 		maior_valor = maior(maior_valor, vet[i]);
 	}
 	printf("\n%d eh o maior", maior_valor);
